@@ -1,0 +1,12 @@
+<h1>Welcome to the Bookstore</h1>
+<h3>We Got Books and Games</h3>
+
+
+<ul>
+    <% @books.each do |book| %>
+        <li><%= link_to(book.title, book_path(book)) %> by <%= book.author %></li>
+    <% end %>
+    
+    <%= link_to("Add a book", new_book_path, class:"button") %>
+    
+</ul>
